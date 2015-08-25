@@ -1,0 +1,33 @@
+<div id="importarea" class="fileupload " style="display:inline-block; margin: 5px; height:120px; width:auto; border: 2px solid #a1a1a1; padding: 10px 20px; background: #F1F1F1; border-radius: 25px; height:auto; min-height: 80px;">
+    <fieldset>
+      <label style="background-color: ##D2D2D2; -moz-border-radius: 15px; -webkit-border-radius: 15px; border: 2px solid #A8A8A8; padding: 2px; box-shadow:1px 0px #668BBD, 0px 1px #696969, 3px 2px #5F4F36, 2px 3px #22272D;cursor: pointer;">
+            <input type="file" name="File Upload" id="csvFile" accept=".csv" style="position: fixed;
+    top: -1000px;"/>
+      Upload File...
+      </label>
+      <div id="fname" style="float:right;"></div>
+    </fieldset>
+    <br/>
+    <div id="csvControls" style="display:none;">
+      <span>Filter On This Text: </span>
+    <input name = "filter" list = "FilterList" placeholder = "Select Filter..." style="margin-bottom:10px;"/></td></tr>
+      <datalist id = "FilterList">
+          <option value = "クレジットカード">
+          <option value = "銀行振込">
+          <option value = "代金引換">
+          <option value = "コンビニ">
+          <option value = "電子マネー">
+      </datalist>
+    <br/>
+      <span>File Encoding:</span>
+      <input type="radio" name="enc" value="Shift-JIS">Shift-JIS
+      <input type="radio" name="enc" value="UTF-8">UTF-8
+      <br/>
+      <br/>
+      <span>Select Column To Filter On: </span>
+      <select id="colFilter">
+      </select>
+    </div>
+    <br/>
+    <button type="button" id="createcsv" style="margin-top:10px; background-color: ##D2D2D2; -moz-border-radius: 15px; -webkit-border-radius: 15px; border: 2px solid #D7D7D7; padding: 2px; box-shadow:1px 0px #668BBD, 0px 1px #696969, 3px 2px #5F4F36, 2px 3px #22272D;position:relative; left:50%; transform: translate(-50%, -50%);">Create Filtered CSV With Selected Criteria</button>
+</div>
